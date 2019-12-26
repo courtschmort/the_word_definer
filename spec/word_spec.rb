@@ -66,7 +66,7 @@ describe '#Word' do
   end
 
   describe('#delete') do
-    it('deletes a word') do
+    it('deletes a word by id') do
       word = Word.new('existential', nil)
       word.save()
       another_word = Word.new('misinformation', nil)
