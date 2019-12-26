@@ -54,10 +54,12 @@ For more information about cloning repositories available on GitHub, click [here
   * [Managing Ruby Versions](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/managing-ruby-versions-409a3b5b-7113-4c4e-aead-c97ce8231197)
   * [Using Ruby Gems](https://www.learnhowtoprogram.com/ruby-and-rails/basic-ruby/using-ruby-gems)
   * [Using RSpec](https://www.learnhowtoprogram.com/ruby-and-rails/bdd-with-ruby/using-rspec)
+4. To bundle gems, type `bundle` after the command prompt.
+5. To run the application, type `ruby app.rb` after the command prompt (**control-C** to exit).
 
 #### Heroku
 
-4. TBD
+6. TBD
 
 ## Known Bugs
 
