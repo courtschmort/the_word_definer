@@ -38,13 +38,13 @@ describe '#Word' do
     end
   end
 
-  describe('.find') do
+  describe('.find_by_id') do
     it('finds a word by id') do
       word = Word.new('existential', nil)
       word.save()
       another_word = Word.new('misinformation', nil)
       another_word.save()
-      expect(Word.find(word.id)).to(eq(word))
+      expect(Word.find_by_id(word.id)).to(eq(word))
     end
   end
 
