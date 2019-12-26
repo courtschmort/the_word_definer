@@ -65,4 +65,15 @@ describe '#Word' do
     end
   end
 
+  describe('#delete') do
+    it('deletes a word') do
+      word = Word.new('existential', nil)
+      word.save()
+      another_word = Word.new('misinformation', nil)
+      another_word.save()
+      word.delete()
+      expect(Word.all()).to(eq([another_word]))
+    end
+  end
+
 end
