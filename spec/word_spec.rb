@@ -3,6 +3,10 @@ require('word.rb')
 
 describe '#Word' do
 
+  before(:each) do
+    Word.clear()
+  end
+
   describe('.all') do
     it('returns an empty array when there are no words') do
       expect(Word.all()).to(eq([]))
@@ -14,6 +18,23 @@ describe '#Word' do
       word = Word.new('supercalifragilisticexpialidocious', nil)
       word.save()
       expect(Word.all()).to(eq([word]))
+    end
+  end
+
+  describe('#==') do
+    it('is the same word if it has the same attributes as another word') do
+      word = Word.new('supercalifragilisticexpialidocious', nil)
+      word_to_compare = Word.new('supercalifragilisticexpialidocious', nil)
+      expect(word).to(eq(word_to_compare))
+    end
+  end
+
+  describe('.clear') do
+    it('clears all words') do
+      word = Word.new('supercalifragilisticexpialidocious', nil)
+      word.save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
     end
   end
 
