@@ -15,7 +15,7 @@ describe '#Word' do
 
   describe('#save') do
     it('saves a word') do
-      word = Word.new('supercalifragilisticexpialidocious', nil)
+      word = Word.new('existential', nil)
       word.save()
       expect(Word.all()).to(eq([word]))
     end
@@ -23,18 +23,28 @@ describe '#Word' do
 
   describe('#==') do
     it('is the same word if it has the same attributes as another word') do
-      word = Word.new('supercalifragilisticexpialidocious', nil)
-      word_to_compare = Word.new('supercalifragilisticexpialidocious', nil)
+      word = Word.new('existential', nil)
+      word_to_compare = Word.new('existential', nil)
       expect(word).to(eq(word_to_compare))
     end
   end
 
   describe('.clear') do
     it('clears all words') do
-      word = Word.new('supercalifragilisticexpialidocious', nil)
+      word = Word.new('existential', nil)
       word.save()
       Word.clear()
       expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it('finds a word by id') do
+      word = Word.new('existential', nil)
+      word.save()
+      another_word = Word.new('misinformation', nil)
+      another_word.save()
+      expect(Word.find(word.id)).to(eq(word))
     end
   end
 
