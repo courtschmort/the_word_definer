@@ -27,8 +27,12 @@ class Word
     @@total_rows = 0
   end
 
-  def self.find_by_id(id)
-    @@words[id]
+  def self.find_by_id(id_to_find)
+    @@words[id_to_find]
+  end
+
+  def self.find_by_word(word_to_find)
+    @@words.values().select { |word| /#{word_to_find}/.match? word.word }
   end
 
 end
