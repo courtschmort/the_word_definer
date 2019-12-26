@@ -1,6 +1,6 @@
 class Word
 
-  attr_accessor :word
+  attr_accessor :word, :id
 
   @@words = {}
   @@total_rows = 0
@@ -12,6 +12,19 @@ class Word
 
   def self.all()
     @@words.values().sort()
+  end
+
+  def save()
+    @@words[self.id] = Word.new(self.word.downcase(), self.id)
+  end
+
+  def ==(word_to_compare)
+    self.word() == word_to_compare.word()
+  end
+
+  def self.clear()
+    @@words = {}
+    @@total_rows = 0
   end
 
 end
