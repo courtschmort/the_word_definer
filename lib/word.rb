@@ -10,4 +10,8 @@ class Word
     @id = id || @@total_rows += 1
   end
 
+  def self.all()
+    @@words.values().sort()
+  end
+
 end
