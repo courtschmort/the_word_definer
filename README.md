@@ -43,7 +43,7 @@ This application is deployed to Heroku and may be viewed by clicking the link be
 
 ###### From the command-line interface (CLI)
 1. To change the directory, type `cd Desktop` after the command prompt.
-2. To clone the repository to your Desktop, type `git clone https://github.com/courtschmort/anagrams_and_antigrams.git` after the command prompt. (This web URL can be located within the **Clone or download** dropdown button in GitHub.)
+2. To clone the repository to your Desktop, type `git clone https://github.com/courtschmort/the_word_definer.git` after the command prompt. (This web URL can be located within the **Clone or download** dropdown button in GitHub.)
 
 For more information about cloning repositories available on GitHub, click [here](https://help.github.com/en/articles/which-remote-url-should-i-use).
 
@@ -72,7 +72,7 @@ If you have any questions, please email me at courtneyschild@gmail.com.
 Find me on LinkedIn and GitHub:
 
 * [Connect with me](https://www.linkedin.com/in/courtneyschild/) on LinkedIn
-* [Follow me](https://github.com/courtschmort) or [watch this repository](https://github.com/courtschmort/anagrams_and_antigrams.git) on GitHub
+* [Follow me](https://github.com/courtschmort) or [watch this repository](https://github.com/courtschmort/the_word_definer.git) on GitHub
 
 <!-- ## Product Roadmap
 
