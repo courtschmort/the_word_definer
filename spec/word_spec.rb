@@ -48,4 +48,12 @@ describe '#Word' do
     end
   end
 
+  describe('.find_by_word') do
+    it('finds a word by word') do
+      word = Word.new('existential', nil)
+      word.save()
+      expect(Word.find_by_word(word.word)).to(eq(word))
+    end
+  end
+
 end
