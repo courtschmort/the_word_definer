@@ -29,6 +29,15 @@ The following prompt outlines the project requirements:
 | PATCH | /words/:id | UPDATE | Update a single word. |  |
 | PATCH | /words/:id | DELETE | Delete an album (or albums) from the list. |  |
 
+| Action | Method | Class or Instance method? | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| CREATE | `.save()` | Instance method | We need a method to save a single instance of a word to our mock database. |
+| READ | `.all()` | Class method | This method will return a list of all words from our mock database. |
+| READ | `.find()` | Class method | In order to look up more information about a single instance of a word, we will need to be able to find it from the list of words. We'll also need our `find()` method for updating and deleting words as well. |
+| UPDATE | `.update()` | Instance method | This method will update a single instance of a word in our mock database. |
+| DELETE | `.delete()` | Instance method | This method will delete a single instance of an album from our mock database. |
+| DELETE | `.clear()` | Class method | This method will empty our mock database. (We'll use this method for testing purposes.) |
+
 ## Setup/Installation Requirements
 
 This application is deployed to Heroku and may be viewed by clicking the link below or edited by following the instructions below to clone or download the repository to your computer.
