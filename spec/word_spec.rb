@@ -9,4 +9,12 @@ describe '#Word' do
     end
   end
 
+  describe('#save') do
+    it('saves a word') do
+      word = Word.new('supercalifragilisticexpialidocious', nil)
+      word.save()
+      expect(Word.all()).to(eq([word]))
+    end
+  end
+
 end
