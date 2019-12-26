@@ -1,8 +1,10 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 5rem 0;
+  margin: 5% 0;
+  background-color: #D5B3FC;
 }
 
 h1 {
   font-family: 'McLaren', cursive;
+  color: #8953C6;
 }
