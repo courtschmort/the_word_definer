@@ -35,4 +35,8 @@ class Word
     @@words.values().select { |word| /#{word_to_find}/.match? word.word }
   end
 
+  def update(word)
+    @word = word
+  end
+
 end
