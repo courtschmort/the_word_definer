@@ -57,7 +57,7 @@ describe '#Word' do
   end
 
   describe('#update') do
-    it('updates a word by id') do
+    it('updates a word') do
       word = Word.new('existential', nil)
       word.save()
       word.update('rutabaga')
