@@ -6,33 +6,50 @@ require('pry')
 also_reload('lib/**/*.rb')
 
 get('/') do
-  "This will be our home page. '/' is always the root route in a Sinatra application."
+  @words = Word.all()
+  erb(:words)
 end
 
 get('/words') do
-  "This route will show a list of all words."
+  if params["search"]
+    @words = Word.search_word(params[:search])
+  else
+    @words = Word.all()
+  end
+  erb(:words)
 end
 
-get('/words/new') do
-  "This will take us to a page with a form for adding a new album."
+get('/words/add') do
+  erb(:add_word)
 end
 
 get('/words/:id') do
-  "This route will show a specific album based on its ID. The value of ID here is #{params[:id]}."
+  @word = Word.find_by_id(params[:id].to_i())
+  erb(:word)
 end
 
 post('/words') do
-  "This route will add an album to our list of words. We can't access this by typing in the URL. In a future lesson, we will use a form that specifies a POST action to reach this route."
+  word = Word.new(params[:word], nil)
+  word.save()
+  @words = Word.all()
+  erb(:words)
 end
 
 get('/words/:id/edit') do
-  "This will take us to a page with a form for updating an album with an ID of #{params[:id]}."
+  @word = Word.find(params[:id].to_i())
+  erb(:edit_word)
 end
 
 patch('/words/:id') do
-  "This route will update an album. We can't reach it with a URL. In a future lesson, we will use a form that specifies a PATCH action to reach this route."
+  @word = Word.find(params[:id].to_i())
+  @word.update(params[:word])
+  @word = Word.all()
+  erb(:words)
 end
 
 delete('/words/:id') do
-  "This route will delete an album. We can't reach it with a URL. In a future lesson, we will use a delete button that specifies a DELETE action to reach this route."
+  @word = Word.find_by_id(params[:id].to_i())
+  @word.delete()
+  @words = Word.all()
+  erb(:words)
 end
