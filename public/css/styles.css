@@ -41,12 +41,12 @@ label {
   box-shadow: none;
 }
 
-.nav {
-  margin-top: 1.5rem;
-}
-
 .box {
   background-color: rgba(137, 83, 198, .5);
   border-radius: .25rem;
   padding: 3rem;
+}
+
+.btn {
+  margin-right: 8px;
 }
