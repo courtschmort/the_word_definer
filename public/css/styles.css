@@ -1,31 +1,48 @@
 body {
-  margin: 5% 0;
+  margin: 8% 0;
   background-color: #DCC0FC;
   font-family: 'Open Sans', sans-serif;
+}
+
+div.container {
+  padding: 0 1rem;
 }
 
 h1 {
   color: #512189;
   font-family: 'McLaren', cursive;
-  padding-bottom: 5%;
+  font-size: 3rem;
+  text-shadow: .125rem .125rem rgba(137, 83, 198, .5);
+  margin: 0 0 2rem;
 }
 
 h3 {
   color: #8953C6;
   font-family: 'McLaren', cursive;
   font-size: 1.5rem;
+  margin: 0 0 1rem;
 }
 
-.link {
+a {
   color: #343a40;
   font-family: 'McLaren', cursive;
 }
 
-.link:hover {
+a:hover {
   color: #23272b;
+}
+
+label {
+  margin: 0 0 1rem;
 }
 
 .form-control:focus {
   border-color: #6c757d;
   box-shadow: none;
+}
+
+.box {
+  background-color: rgba(137, 83, 198, .5);
+  border-radius: .25rem;
+  padding: 2rem;
 }
