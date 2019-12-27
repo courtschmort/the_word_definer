@@ -11,7 +11,7 @@ class Word
   end
 
   def self.all()
-    @@words.values().sort()
+    @@words.values().sort_by(&:word)
   end
 
   def save()
