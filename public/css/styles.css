@@ -1,10 +1,26 @@
 body {
-  font-family: 'Open Sans', sans-serif;
   margin: 5% 0;
-  background-color: #D5B3FC;
+  background-color: #DCC0FC;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
+  color: #512189;
   font-family: 'McLaren', cursive;
+  padding-bottom: 5%;
+}
+
+h3 {
   color: #8953C6;
+  font-family: 'McLaren', cursive;
+  font-size: 1.5rem;
+}
+
+.link {
+  color: #343a40;
+  font-family: 'McLaren', cursive;
+}
+
+.link:hover {
+  color: #23272b;
 }
