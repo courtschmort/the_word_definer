@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6">
+
+    <div class="form-group">
+
+      <h3>Edit <%= @word.word %>:</h3>
+
+      <form action="/words/<%= @word.id %>" method="post">
+        <div class="form-group">
+          <input name="_method" type="hidden" value="patch">
+          <input name="word" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-dark">Edit</button>
+      </form>
+
+    </div>
+
+    <p><a href="/words">🔙Return to list</a></p>
+
+  </div>
+</div>

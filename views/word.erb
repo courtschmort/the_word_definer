@@ -1,4 +1,15 @@
 <h3><%= @word.word %></h3>
 
-<a href="/words/<%= @word.id %>/edit">✏️Edit word</a>
-<a href="/words" class="nav">🔙Back</a>
+<div class="form-group">
+
+  <form action="/words/<%= @word.id %>" method="post">
+    <div class="form-group">
+      <input name="_method" type="hidden" value="delete">
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/words/<%= @word.id %>/edit">✏️Edit word</a>
+  </form>
+
+</div>
+
+<p><a href="/words">🔙Return to list</a></p>
