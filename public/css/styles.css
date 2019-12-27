@@ -24,3 +24,8 @@ h3 {
 .link:hover {
   color: #23272b;
 }
+
+.form-control:focus {
+  border-color: #6c757d;
+  box-shadow: none;
+}
