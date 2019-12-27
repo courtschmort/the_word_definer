@@ -27,20 +27,25 @@ class Word
     @@total_rows = 0
   end
 
-  def self.find_by_id(id_to_find)
-    @@words[id_to_find]
+  def self.find(id)
+    @@words[id]
   end
 
-  def self.find_by_word(word_to_find)
-    @@words.values().select { |word| /#{word_to_find}/.match? word.word }
+  def self.search_word(input)
+    @@words.values().select { |word| /#{input}/.match? word.word }
   end
 
   def update(word)
-    @word = word
+    self.word = word
+    @@words[self.id] = Word.new(self.word, self.id)
   end
 
   def delete()
     @@words.delete(self.id)
   end
+
+  # def definitions()
+  #   Definition.define(self.id)
+  # end
 
 end

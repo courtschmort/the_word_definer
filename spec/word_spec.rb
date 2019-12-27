@@ -38,21 +38,21 @@ describe '#Word' do
     end
   end
 
-  describe('.find_by_id') do
+  describe('.find') do
     it('finds a word by id') do
       word = Word.new('existential', nil)
       word.save()
       another_word = Word.new('misinformation', nil)
       another_word.save()
-      expect(Word.find_by_id(word.id)).to(eq(word))
+      expect(Word.find(word.id)).to(eq(word))
     end
   end
 
-  describe('.find_by_word') do
+  describe('.search_word') do
     it('finds a word by word') do
       word = Word.new('existential', nil)
       word.save()
-      expect(Word.find_by_word(word.word)).to(eq([word]))
+      expect(Word.search_word(word.word)).to(eq([word]))
     end
   end
 
@@ -75,5 +75,17 @@ describe '#Word' do
       expect(Word.all()).to(eq([another_word]))
     end
   end
+
+  # describe('#definitions') do
+  #   it("returns a word's definitions") do
+  #     word = Word.new('existential', nil)
+  #     word.save()
+  #     definition = Definition.new("of or relating to existence", nil)
+  #     definition.save()
+  #     another_definition = Definition.new("of, relating to, or characteristic of philosophical existentialism; concerned with the nature of human existence as determined by the individual's freely made choices", nil)
+  #     another_definition.save()
+  #     expect(album.definitions).to(eq([definition, another_definition]))
+  #   end
+  # end
 
 end
