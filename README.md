@@ -23,7 +23,7 @@ The following prompt outlines the project requirements:
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | GET | /words | READ | Get a list of words. |  |
 | GET | /words/:id | READ | Look at the detail page for a single word. |  |
-| GET | /words/new | READ | Go to the form page for adding a new word to the list. |  |
+| GET | /words/add | READ | Go to the form page for adding a new word to the list. |  |
 | GET | /words/:id/edit | READ | Go to the form page for editing a word. |  |
 | POST | /words | CREATE | Add a new word to the list of words. |  |
 | PATCH | /words/:id | UPDATE | Update a single word. |  |
