@@ -6,7 +6,7 @@
     <% if @words.any? %>
     <ul>
       <% @words.each do |word| %>
-      <li><a href="/words/<%= word.id %>"><%= word.word %></a></li>
+      <li><a href="/words/<%= word.id %>"><%= word.text %></a></li>
       <% end %>
     </ul>
     <p><a href="/words/add">➕Add another word</a> or click on an existing word to learn more!</p>
@@ -23,7 +23,7 @@
       <form action="/words">
         <div class="form-group">
           <label for="search">Find a word:</label>
-          <input name="search" class="form-control" type="text">
+          <input id="search" name="search" class="form-control" type="text">
         </div>
         <button type="submit" class="btn btn-dark">Find</button>
         <a href="/words">🔙Return to list</a>

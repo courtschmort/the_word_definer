@@ -1,25 +1,25 @@
 class Word
 
-  attr_accessor :word, :id
+  attr_accessor :text, :id
 
   @@words = {}
   @@total_rows = 0
 
-  def initialize(word, id)
-    @word = word
+  def initialize(text, id)
+    @text = text
     @id = id || @@total_rows += 1
   end
 
   def self.all()
-    @@words.values().sort_by(&:word)
+    @@words.values().sort_by(&:text)
   end
 
   def save()
-    @@words[self.id] = Word.new(self.word.downcase(), self.id)
+    @@words[self.id] = Word.new(self.text.downcase(), self.id)
   end
 
   def ==(word_to_compare)
-    self.word() == word_to_compare.word()
+    self.text() == word_to_compare.text()
   end
 
   def self.clear()
@@ -31,13 +31,13 @@ class Word
     @@words[id]
   end
 
-  def self.search_word(input)
-    @@words.values().select { |word| /#{input}/.match? word.word }
+  def self.search_text(text)
+    @@words.values().select { |word| /#{text}/.match? word.text }
   end
 
-  def update(word)
-    self.word = word
-    @@words[self.id] = Word.new(self.word, self.id)
+  def update(text)
+    self.text = text
+    @@words[self.id] = Word.new(self.text, self.id)
   end
 
   def delete()

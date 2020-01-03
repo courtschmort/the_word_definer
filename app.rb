@@ -12,7 +12,7 @@ end
 
 get('/words') do
   if params["search"]
-    @words = Word.search_word(params[:search])
+    @words = Word.search_text(params[:search])
   else
     @words = Word.all()
   end
@@ -24,12 +24,12 @@ get('/words/add') do
 end
 
 get('/words/:id') do
-  @word = Word.find_by_id(params[:id].to_i())
+  @word = Word.find(params[:id].to_i())
   erb(:word)
 end
 
 post('/words') do
-  word = Word.new(params[:word], nil)
+  word = Word.new(params[:word_text], nil)
   word.save()
   @words = Word.all()
   erb(:words)
@@ -42,13 +42,13 @@ end
 
 patch('/words/:id') do
   @word = Word.find(params[:id].to_i())
-  @word.update(params[:word])
+  @word.update(params[:text])
   @word = Word.all()
   erb(:words)
 end
 
 delete('/words/:id') do
-  @word = Word.find_by_id(params[:id].to_i())
+  @word = Word.find(params[:id].to_i())
   @word.delete()
   @words = Word.all()
   erb(:words)
