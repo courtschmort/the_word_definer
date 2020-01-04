@@ -12,7 +12,7 @@ end
 
 get('/words') do
   if params["search"]
-    @words = Word.search_text(params[:search])
+    @words = Word.search(params[:search])
   else
     @words = Word.all()
   end
