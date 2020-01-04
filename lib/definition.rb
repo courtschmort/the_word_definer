@@ -12,4 +12,12 @@ class Definition
     @id = id || @@total_rows += 1
   end
 
+  def ==(definition_to_compare)
+    (self.text() == definition_to_compare.text()) && (self.word_id() == definition_to_compare.word_id())
+  end
+
+  def self.clear()
+    @@definitions = {}
+  end
+
 end
