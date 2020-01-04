@@ -1,5 +1,6 @@
 require('rspec')
 require('word.rb')
+require('pry')
 
 describe '#Word' do
 
