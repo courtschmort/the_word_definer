@@ -2,6 +2,8 @@
 
 #### Routing with Ruby Independent Project for [Epicodus](https://www.epicodus.com/); December 26, 2019
 
+Updated January 4, 2020
+
 #### By Courtney Schild
 
 ## Description
@@ -21,13 +23,18 @@ The following prompt outlines the project requirements:
 
 | HTTP verb | Route | CRUD Action | Description | URL |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| GET | /words | READ | Get a list of words. |  |
-| GET | /words/:id | READ | Look at the detail page for a single word. |  |
-| GET | /words/add | READ | Go to the form page for adding a new word to the list. |  |
-| GET | /words/:id/edit | READ | Go to the form page for editing a word. |  |
-| POST | /words | CREATE | Add a new word to the list of words. |  |
-| PATCH | /words/:id | UPDATE | Update a single word. |  |
-| PATCH | /words/:id | DELETE | Delete an album (or albums) from the list. |  |
+| GET | /words | READ | Get a list of words. | https://blooming-falls-07799.herokuapp.com/words |
+| GET | /words/add | READ | Go to the form page for adding a new word to the list. | https://blooming-falls-07799.herokuapp.com/words/add |
+| GET | /words/:id | READ | Look at the detail page for a single word. | https://blooming-falls-07799.herokuapp.com/words/4 |
+| GET | /words/:id/edit | READ | Go to the form page for editing a word. | https://blooming-falls-07799.herokuapp.com/words/4/edit |
+| POST | /words | CREATE | Add a new word to the list of words. | https://blooming-falls-07799.herokuapp.com/words |
+| PATCH | /words/:id | UPDATE | Update a single word. | https://blooming-falls-07799.herokuapp.com/words/4 |
+| PATCH | /words/:id | DELETE | Delete a word (or words) from the list. | https://blooming-falls-07799.herokuapp.com/words/4 |
+| GET | /words/:id/definitions/:definition_id | READ | Get the definition for a specific word. | https://blooming-falls-07799.herokuapp.com/words/4 |
+| GET | /words/:id/definitions/:definition_id | READ | Get the detail for a specific definition. | https://blooming-falls-07799.herokuapp.com/words/4/definitions/2 |
+| POST | /words/:id/definitions | CREATE | Post a new definition. | https://blooming-falls-07799.herokuapp.com/words/4/ |
+| PATCH | /words/:id/definitions/:definition_id | UPDATE | Edit a definition and then route back to the word view. | https://blooming-falls-07799.herokuapp.com/words/4/definitions/2 |
+| DELETE | /words/:id/definitions/:definition_id | DELETE | Delete a definition and then route back to the word view. | https://blooming-falls-07799.herokuapp.com/words/4/definitions/2 |
 
 | Action | Method | Class or Instance method? | Description |
 | ----------- | ----------- | ----------- | ----------- |
@@ -42,7 +49,7 @@ The following prompt outlines the project requirements:
 
 This application is deployed to Heroku and may be viewed by clicking the link below or edited by following the instructions below to clone or download the repository to your computer.
 
-**Click [here]() to open the Heroku application.**
+**Click [here](https://blooming-falls-07799.herokuapp.com/words) to open the Heroku app.**
 
 #### Cloning
 
@@ -68,7 +75,8 @@ For more information about cloning repositories available on GitHub, click [here
 
 #### Heroku
 
-6. TBD
+6. Complete the following lesson at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to deploy to Heroku:
+  * [Deploy to Heroku](https://www.learnhowtoprogram.com/ruby-and-rails/routing-with-ruby/deploy-to-heroku)
 
 ## Known Bugs
 
