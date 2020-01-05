@@ -1,20 +1,14 @@
-<div class="row">
-  <div class="col-md-6">
-
+<div class="form-group">
+  <form action="/words" method="post">
     <div class="form-group">
-
-      <h3>Add a word:</h3>
-
-      <form action="/words" method="post">
-        <div class="form-group">
-          <input id="n" name="word_text" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn btn-dark">Add</button>
-      </form>
-
+      <label for="word_text">Add a word:</label>
+      <input class="form-control" name="word_text" type="text">
     </div>
-
-    <p><a href="/words">🔙Return to list</a></p>
-
-  </div>
+    <button class="btn btn-dark" type="submit">Add</button>
+  </form>
 </div>
+
+<br>
+<hr>
+
+<p><a class="link" href="/words">🔙Return to my list of words</a></p>

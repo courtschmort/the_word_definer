@@ -1,35 +1,32 @@
 <div class="row">
+  
   <div class="col-md-6">
-
     <h3>Your words:</h3>
-
     <% if @words.any? %>
     <ul>
       <% @words.each do |word| %>
-      <li><a href="/words/<%= word.id %>"><%= word.text %></a></li>
+      <li><a class="word" href="/words/<%= word.id %>"><%= word.text %></a></li>
       <% end %>
     </ul>
-    <p><a href="/words/add">➕Add another word</a> or click on an existing word to learn more!</p>
+    <br>
+    <p><a class="link" href="/words/add">➕Add another word</a> or click on an existing word to learn more!</p>
     <% else %>
-    <p>You don't have any words yet. <a href="/words/add">➕Add a word</a> to get started!</p>
+    <br>
+    <p>You don't have any words yet. <a class="link" href="/words/add">➕Add a word</a> to get started!</p>
     <% end %>
-
   </div>
 
   <div class="col-md-6">
-
     <div class="box">
-
       <form action="/words">
         <div class="form-group">
-          <label for="search">Find a word:</label>
-          <input id="search" name="search" class="form-control" type="text">
+          <label for="search">Where's my word?</label>
+          <input class="form-control" name="search" type="text">
         </div>
-        <button type="submit" class="btn btn-dark">Find</button>
-        <a href="/words">🔙Return to list</a>
+        <button class="btn btn-dark" type="submit">Search</button>
+        <a class="link" href="/words">🔙Return to my list of words</a>
       </form>
-
     </div>
-
   </div>
+
 </div>

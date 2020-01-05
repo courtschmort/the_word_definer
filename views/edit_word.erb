@@ -1,21 +1,15 @@
-<div class="row">
-  <div class="col-md-6">
-
+<div class="form-group">
+  <form action="/words/<%= @word.id %>" method="post">
     <div class="form-group">
-
-      <h3>Edit <%= @word.text %>:</h3>
-
-      <form action="/words/<%= @word.id %>" method="post">
-        <div class="form-group">
-          <input name="_method" type="hidden" value="patch">
-          <input name="word" type="text" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-dark">Edit</button>
-      </form>
-
+      <input name="_method" type="hidden" value="patch">
+      <label for="word_text">Edit <span class="word"><%= @word.text %></span>:</label>
+      <input class="form-control" name="word_text" type="text">
     </div>
-
-    <p><a href="/words">🔙Return to list</a></p>
-
-  </div>
+    <button class="btn btn-dark" type="submit">Edit</button>
+  </form>
 </div>
+
+<br>
+<hr>
+
+<p><a class="link" href="/words/<%= @word.id %>">🔙Return to <span class="word"><%= @word.text %></span></a></p>
