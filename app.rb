@@ -36,8 +36,7 @@ end
 # CRUD for Word
 
 get('/') do
-  @words = Word.all()
-  erb(:words)
+  redirect to('/words')
 end
 
 get('/words') do
@@ -61,8 +60,7 @@ end
 post('/words') do
   word = Word.new(params[:word_text], nil)
   word.save()
-  @words = Word.all()
-  erb(:words)
+  redirect to('/words')
 end
 
 get('/words/:id/edit') do
@@ -73,13 +71,11 @@ end
 patch('/words/:id') do
   @word = Word.find(params[:id].to_i())
   @word.update(params[:word_text])
-  @word = Word.all()
-  erb(:words)
+  redirect to('/words')
 end
 
 delete('/words/:id') do
   @word = Word.find(params[:id].to_i())
   @word.delete()
-  @words = Word.all()
-  erb(:words)
+  redirect to('/words')
 end
