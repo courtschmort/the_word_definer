@@ -17,18 +17,17 @@ h1 {
 }
 
 h3 {
-  color: #8953C6;
   font-family: 'McLaren', cursive;
   font-size: 1.5rem;
   margin: 0 0 1.5rem;
 }
 
-a {
+a.link {
   color: #343a40;
   font-family: 'McLaren', cursive;
 }
 
-a:hover {
+a.link:hover {
   color: #23272b;
 }
 
@@ -49,4 +48,17 @@ label {
 
 .btn {
   margin-right: 8px;
+}
+
+.word {
+  color: #8953C6;
+  font-family: 'McLaren', cursive;
+}
+
+a.word:hover {
+  color: #512189;
+}
+
+.definition {
+  font-family: 'McLaren', cursive;
 }
