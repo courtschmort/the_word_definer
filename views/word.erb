@@ -1,15 +1,40 @@
-<h3><%= @word.text %></h3>
+<h3 class="word"><%= @word.text %></h3>
+
+<% if @word.definitions.any? %>
+<ol>
+  <% @word.definitions.each do |definition| %>
+  <li><a class="link" href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.text %></a></li>
+  <% end %>
+</ol>
+<% else %>
+<p>You haven't defined <span class="word"><%= @word.text %></span> yet.</p>
+<% end %>
+
+<br>
+
+<div class="form-group box">
+  <form action="/words/<%= @word.id %>/definitions" method="post">
+    <div class="form-group">
+      <label for="definition_text">Add a definition:</label>
+      <textarea class="form-control" name="definition_text" type="text" rows="2"></textarea>
+    </div>
+    <button class="btn btn-dark" type="submit">Add</button>
+  </form>
+</div>
+
+<br>
 
 <div class="form-group">
-
   <form action="/words/<%= @word.id %>" method="post">
     <div class="form-group">
       <input name="_method" type="hidden" value="delete">
     </div>
-    <button type="submit" class="btn btn-danger">Delete</button>
-    <a href="/words/<%= @word.id %>/edit">✏️Edit word</a>
+    <a class="btn btn-dark" href="/words/<%= @word.id %>/edit" role="button">Edit</a>
+    <button class="btn btn-outline-dark" type="submit">Delete</button>
   </form>
-
 </div>
 
-<p><a href="/words">🔙Return to list</a></p>
+<br>
+<hr>
+
+<p><a class="link" href="/words">🔙Return to my list of words</a></p>
