@@ -1,0 +1,30 @@
+<h3 class="word"><%= @definition.word.text %></h3>
+<p class="definition"><%= @definition.text %></p>
+
+<br>
+
+<div class="form-group box">
+  <form action="/words/<%= @definition.word.id %>/definitions/<%= @definition.id %>" method="post">
+    <div class="form-group">
+      <input name="_method" type="hidden" value="patch">
+      <label for="definition_text">Edit your definition:</label>
+      <textarea class="form-control" name="definition_text" type="text" rows="2"></textarea>
+    </div>
+    <button class="btn btn-dark" type="submit">Edit</button>
+  </form>
+</div>
+
+<br>
+
+<div class="form-group">
+  <form action="/words/<%= @definition.word.id %>/definitions/<%= @definition.id %>" method="post">
+    <div class="form-group">
+      <input name="_method" type="hidden" value="delete">
+    </div>
+    <button class="btn btn-outline-dark" type="submit">Delete</button>
+  </form>
+</div>
+
+<hr>
+
+<p><a class="link" href="/words/<%= @definition.word.id %>">🔙Return to <span class="word"><%= @definition.word.text %></span></a></p>
